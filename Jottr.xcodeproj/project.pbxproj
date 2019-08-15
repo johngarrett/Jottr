@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041E29692303B7D20006DE5B /* JottrMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041E29682303B7D20006DE5B /* JottrMarkdown.framework */; };
 		04BFE90D230384CB003AF303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFE90C230384CB003AF303 /* AppDelegate.swift */; };
-		04BFE90F230384CB003AF303 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFE90E230384CB003AF303 /* ViewController.swift */; };
-		04BFE912230384CB003AF303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFE910230384CB003AF303 /* Main.storyboard */; };
 		04BFE914230384CC003AF303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFE913230384CC003AF303 /* Assets.xcassets */; };
 		04BFE917230384CC003AF303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFE915230384CC003AF303 /* LaunchScreen.storyboard */; };
 		04BFE922230384CC003AF303 /* JottrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFE921230384CC003AF303 /* JottrTests.swift */; };
@@ -34,10 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041E29682303B7D20006DE5B /* JottrMarkdown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JottrMarkdown.framework; path = ../../JottrMarkdown/JottrMarkdown/Carthage/Build/iOS/JottrMarkdown.framework; sourceTree = "<group>"; };
 		04BFE909230384CB003AF303 /* Jottr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jottr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFE90C230384CB003AF303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04BFE90E230384CB003AF303 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04BFE911230384CB003AF303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BFE913230384CC003AF303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BFE916230384CC003AF303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BFE918230384CC003AF303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041E29692303B7D20006DE5B /* JottrMarkdown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041E29672303B7C40006DE5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				041E29682303B7D20006DE5B /* JottrMarkdown.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		04BFE900230384CB003AF303 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +88,7 @@
 				04BFE920230384CC003AF303 /* JottrTests */,
 				04BFE92B230384CC003AF303 /* JottrUITests */,
 				04BFE90A230384CB003AF303 /* Products */,
+				041E29672303B7C40006DE5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				04BFE90C230384CB003AF303 /* AppDelegate.swift */,
-				04BFE90E230384CB003AF303 /* ViewController.swift */,
-				04BFE910230384CB003AF303 /* Main.storyboard */,
 				04BFE913230384CC003AF303 /* Assets.xcassets */,
 				04BFE915230384CC003AF303 /* LaunchScreen.storyboard */,
 				04BFE918230384CC003AF303 /* Info.plist */,
@@ -135,6 +141,7 @@
 				04BFE905230384CB003AF303 /* Sources */,
 				04BFE906230384CB003AF303 /* Frameworks */,
 				04BFE907230384CB003AF303 /* Resources */,
+				041E296A2303B7ED0006DE5B /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -231,7 +238,6 @@
 			files = (
 				04BFE917230384CC003AF303 /* LaunchScreen.storyboard in Resources */,
 				04BFE914230384CC003AF303 /* Assets.xcassets in Resources */,
-				04BFE912230384CB003AF303 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +257,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		041E296A2303B7ED0006DE5B /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/JottrMarkdown.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/JottrMarkdown.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04BFE905230384CB003AF303 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BFE90F230384CB003AF303 /* ViewController.swift in Sources */,
 				04BFE90D230384CB003AF303 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +321,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04BFE910230384CB003AF303 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04BFE911230384CB003AF303 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04BFE915230384CC003AF303 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -434,6 +454,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65W3J85C2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)Markdown/JottrMarkdown/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Jottr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +476,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65W3J85C2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)Markdown/JottrMarkdown/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Jottr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
